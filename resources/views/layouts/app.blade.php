@@ -18,7 +18,7 @@
     <style>
         body {
             font-family: 'Roboto', sans-serif;
-            background: linear-gradient(rgba(0, 76, 151, 0.7), rgba(0, 76, 151, 0.7)), url('/img/login-bg.avif') no-repeat center center fixed;
+            background: linear-gradient(rgba(0, 76, 151, 0.7), rgba(0, 76, 151, 0.7)), url('/login-bg.avif') no-repeat center center fixed;
             background-size: cover;
             background-color: #004c97;
             min-height: 100vh;
