@@ -79,6 +79,24 @@
                         <div class="menu-title">Sales</div>
                     </a>
                 </li>
+                <li class="">
+                    <a href="{{ route('payments.index') }}">
+                        <div class="parent-icon"><i class="fas fa-money-bill"></i></div>
+                        <div class="menu-title">Payments</div>
+                    </a>
+                </li>
+                <li class="">
+                    <a href="{{ route('stock_adjustments.index') }}">
+                        <div class="parent-icon"><i class="fas fa-boxes"></i></div>
+                        <div class="menu-title">Stock Adjustments</div>
+                    </a>
+                </li>
+                <li class="">
+                    <a href="{{ route('users.index') }}">
+                        <div class="parent-icon"><i class="fas fa-users"></i></div>
+                        <div class="menu-title">Users</div>
+                    </a>
+                </li>
             </ul>
         </div>
         <!-- Header -->

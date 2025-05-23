@@ -20,6 +20,10 @@ class Payment extends Model
         'notes'
     ];
 
+     protected $casts = [
+        'payment_date' => 'date', // Cast to Carbon instance
+    ];
+
     // Relationship with sale
     public function sale()
     {
