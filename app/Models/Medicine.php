@@ -11,6 +11,16 @@ class Medicine extends Model
 {
     use HasFactory;
     protected $fillable = ['slug', 'name', 'category_id', 'batch_number', 'expiry_date', 'cost_price', 'selling_price', 'stock_quantity'];
+
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
+    }
+
+    protected $casts = [
+        'expiry_date' => 'date', // Cast to Carbon instance
+    ];
+    
     protected static function booted()
     {
         static::creating(function ($medicine) {

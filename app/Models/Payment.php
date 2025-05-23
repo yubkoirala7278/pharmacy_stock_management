@@ -20,6 +20,19 @@ class Payment extends Model
         'notes'
     ];
 
+    // Relationship with sale
+    public function sale()
+    {
+        return $this->belongsTo(Sale::class);
+    }
+
+    // Relationship with user
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+
+    // Create unique slug
     protected static function booted()
     {
         static::creating(function ($payment) {

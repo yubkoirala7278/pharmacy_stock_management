@@ -22,6 +22,29 @@ class Sale extends Model
         'customer_phone'
     ];
 
+    protected $casts = [
+        'sale_date' => 'date', // Cast to Carbon instance
+    ];
+
+    // Relationship with user
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+
+    // Relationship with sale details
+    public function saleDetails()
+    {
+        return $this->hasMany(SaleDetail::class);
+    }
+
+    // Relationship with payments
+    public function payments()
+    {
+        return $this->hasMany(Payment::class);
+    }
+
+    // Create unique slug
     protected static function booted()
     {
         static::creating(function ($sale) {

@@ -1,0 +1,47 @@
+        .card-header {
+            font-weight: bold;
+        }
+
+        .table th,
+        .table td {
+            vertical-align: middle;
+        }
+
+        .modal-body p {
+            margin-bottom: 10px;
+        }
+
+        .sidebar-wrapper {
+            transition: all 0.3s ease;
+        }
+
+        .topbar {
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Custom styles for action buttons */
+        .btn-group .btn {
+            padding: 0.5rem 0.75rem;
+            /* Slightly larger padding for better click area */
+            border-radius: 0.375rem;
+            /* Rounded corners */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            /* Subtle shadow */
+        }
+
+        .btn-group .btn:hover {
+            transform: scale(1.05);
+            /* Slight scale-up on hover */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+            /* Enhanced shadow on hover */
+        }
+
+        .btn-group .btn i {
+            font-size: 1rem;
+            /* Consistent icon size */
+        }
+
+        tr{
+            white-space: nowrap;
+        }
+        

@@ -10,6 +10,12 @@ class Purchase extends Model
 {
     use HasFactory;
     protected $fillable = ['slug', 'supplier_id', 'user_id', 'purchase_code', 'purchase_date', 'total_amount'];
+
+     protected $casts = [
+        'purchase_date' => 'date', // Cast to Carbon instance
+    ];
+
+    // Insert unique slug
     protected static function booted()
     {
         static::creating(function ($purchase) {
@@ -24,5 +30,23 @@ class Purchase extends Model
 
             $purchase->slug = $slug;
         });
+    }
+
+    // Relationship with supplier
+    public function supplier()
+    {
+        return $this->belongsTo(Supplier::class);
+    }
+
+    // Relationship with user
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+
+    // Relationship with purchase details
+    public function purchaseDetails()
+    {
+        return $this->hasMany(PurchaseDetail::class);
     }
 }
