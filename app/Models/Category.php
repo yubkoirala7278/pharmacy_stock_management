@@ -12,6 +12,13 @@ class Category extends Model
 
     protected $fillable = ['slug', 'name', 'description'];
 
+    // Relationship with medicines
+    public function medicines()
+    {
+        return $this->hasMany(Medicine::class, 'category_id');
+    }
+
+    // Generate unique slug
     protected static function booted()
     {
         static::creating(function ($category) {

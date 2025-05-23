@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
+Route::get('/home/charts', [HomeController::class, 'getChartData'])->name('home.charts');
 
 // Medicine
 Route::get('/medicines', [MedicinesController::class, 'index'])->name('medicines.index');
